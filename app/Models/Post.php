@@ -14,6 +14,11 @@ class Post extends Model
         'title',
         'body',
         'enabled',
-        'published_at'
+        'published_at',
+        'image'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
